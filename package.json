@@ -1,7 +1,7 @@
 {
     "name": "cameo",
     "displayName": "cameo",
-    "description": "Macintosh VSCode themes",
+    "description": "macOS Mojave Dark UI Theme",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.30.0"
