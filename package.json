@@ -2,7 +2,7 @@
   "name": "cameo",
   "displayName": "Cameo",
   "description": "macOS Mojave Dark UI Themes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "pascalpixel",
   "engines": {
     "vscode": "^1.30.0"
@@ -35,22 +35,22 @@
   "contributes": {
     "themes": [
       {
-        "label": "default-dark",
+        "label": "Cameo Dark (Visual Studio)",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-default-dark-color-theme.json"
       },
       {
-        "label": "default-dark-plus",
+        "label": "Cameo Dark+ (default dark)",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-default-dark-plus-color-theme.json"
       },
       {
-        "label": "nord",
+        "label": "Cameo Nord",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-nord-color-theme.json"
       },
       {
-        "label": "one-dark",
+        "label": "Cameo One Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-one-dark-color-theme.json"
       }

@@ -182,7 +182,7 @@ Object.keys(THEMES).forEach(key => {
 
 // Put themes in package.json
 packageJson.contributes.themes = Object.keys(THEMES).map(key => ({
-  label: key,
+  label: THEMES[key].name,
   uiTheme: 'vs-dark',
   path: `./themes/cameo-${key}-color-theme.json`
 }))
