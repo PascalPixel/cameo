@@ -1,8 +1,8 @@
 {
   "name": "cameo",
-  "displayName": "cameo",
-  "description": "macOS Mojave Dark UI Theme",
-  "version": "0.0.2",
+  "displayName": "Cameo",
+  "description": "macOS Mojave Dark UI Themes",
+  "version": "0.0.3",
   "publisher": "pascalpixel",
   "engines": {
     "vscode": "^1.30.0"
@@ -10,6 +10,29 @@
   "categories": [
     "Themes"
   ],
+  "author": {
+    "name": "superpencil"
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#FD9388",
+    "theme": "dark"
+  },
+  "main": "./out/extension",
+  "scripts": {
+    "compile": "node makeThemes.js",
+    "publish": "vsce publish"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/Superpencil/cameo/issues",
+    "email": "smcbreen@microsoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Superpencil/cameo.git"
+  },
+  "homepage": "https://github.com/Superpencil/cameo/blob/master/README.md",
   "contributes": {
     "themes": [
       {
