@@ -1,8 +1,11 @@
 # Change Log
 All notable changes to the Cameo Theme will be documented in this file.
 
+## [1.1.0]
+- Added Dracula & Dark (Visual Studio)
+
 ## [1.0.0]
-- First release version
+- First Release
 
 ## [0.0.6]
 - Added One Dark & Nord
@@ -11,4 +14,4 @@ All notable changes to the Cameo Theme will be documented in this file.
 - Added Dark+ (default theme)
 
 ## [0.0.1]
-- Initial release with Mac Mojave Dark UI colors and standard color scheme
+- Initial release with UI theme only

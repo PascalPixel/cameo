@@ -1,9 +1,9 @@
 const fs = require('fs')
 const packageJson = require('./package.json')
-const defaultDark = require('./vscode/extensions/theme-defaults/themes/dark_vs.json')
-const defaultDarkPlus = require('./vscode/extensions/theme-defaults/themes/dark_plus.json')
-const nord = require('./nord-visual-studio-code/themes/nord.json')
-const oneDark = require('./OneDark-Pro/themes/OneDark-Pro.json')
+const defaultDark = require('./submodules/default/extensions/theme-defaults/themes/dark_vs.json')
+const defaultDarkPlus = require('./submodules/default/extensions/theme-defaults/themes/dark_plus.json')
+const nord = require('./submodules/nord/themes/nord.json')
+const oneDark = require('./submodules/one-dark/themes/OneDark-Pro.json')
 
 const COLORS = {
   hi: '#1a1a1a',
