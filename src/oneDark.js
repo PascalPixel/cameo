@@ -1,7 +1,7 @@
 module.exports = {
   type: 'dark',
-  name: 'Cameo Dark+ (default dark)',
-  variant: 'default-dark',
+  name: 'Cameo One Dark',
+  variant: 'one-dark',
   include: './_ui.json',
   tokenColors: [
     {
