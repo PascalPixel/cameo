@@ -1,7 +1,6 @@
 {
   "type": "dark",
   "name": "Cameo One Dark",
-  "variant": "one-dark",
   "include": "./_ui.json",
   "tokenColors": [
     {

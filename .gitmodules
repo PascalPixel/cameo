@@ -1,0 +1,12 @@
+[submodule "vscode"]
+	path = vscode
+	url = https://github.com/Microsoft/vscode
+[submodule "OneDark-Pro"]
+	path = OneDark-Pro
+	url = https://github.com/Binaryify/OneDark-Pro
+[submodule "nord-visual-studio-code"]
+	path = nord-visual-studio-code
+	url = https://github.com/arcticicestudio/nord-visual-studio-code
+[submodule "visual-studio-code"]
+	path = visual-studio-code
+	url = https://github.com/dracula/visual-studio-code

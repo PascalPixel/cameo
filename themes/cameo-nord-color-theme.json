@@ -1,7 +1,6 @@
 {
   "type": "dark",
   "name": "Cameo Nord",
-  "variant": "nord",
   "include": "./_ui.json",
   "tokenColors": [
     {

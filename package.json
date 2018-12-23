@@ -35,17 +35,22 @@
   "contributes": {
     "themes": [
       {
-        "label": "Cameo Dark+ (default dark)",
+        "label": "default-dark",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-default-dark-color-theme.json"
       },
       {
-        "label": "Cameo Nord",
+        "label": "default-dark-plus",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cameo-default-dark-plus-color-theme.json"
+      },
+      {
+        "label": "nord",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-nord-color-theme.json"
       },
       {
-        "label": "Cameo One Dark",
+        "label": "one-dark",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-one-dark-color-theme.json"
       }
