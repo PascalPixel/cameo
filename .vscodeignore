@@ -1,4 +1,10 @@
 .vscode/**
 .vscode-test/**
 .gitignore
-vsc-extension-quickstart.md
+submodules
+node_modules
+index.js
+package.json
+package-lock.json
+TODO.md
+DEFAULTS.js
