@@ -21,7 +21,7 @@ const COLORS = {
   rl: '#be1100',
   yn: '#b89500',
   yl: '#d7ba7d',
-  un: '#ff0000ff',
+  un: '#000000',
 }
 
 const UI = {
