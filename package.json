@@ -55,5 +55,8 @@
         "path": "./themes/cameo-one-dark-color-theme.json"
       }
     ]
+  },
+  "dependencies": {
+    "color": "^3.1.0"
   }
 }

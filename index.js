@@ -6,14 +6,22 @@ const nord = require('./submodules/nord/themes/nord.json')
 const oneDark = require('./submodules/one-dark/themes/OneDark-Pro.json')
 
 const COLORS = {
+  oo: '#00000000',
   hi: '#1a1a1a',
-  mi: '#cecece',
   lo: '#212121',
   mo: '#262626',
   et: '#363636',
   tr: '#726c6b',
-  oo: '#00000000',
-  un: '#ff0000ff'
+  mi: '#cecece',
+  bn: '#0e639c',
+  bl: '#1177bb',
+  gn: '#388a34',
+  gl: '#369432',
+  rn: '#5a1d1d',
+  rl: '#be1100',
+  yn: '#b89500',
+  yl: '#d7ba7d',
+  un: '#ff0000ff',
 }
 
 const UI = {
@@ -37,7 +45,7 @@ const UI = {
     'debugExceptionWidget.background': COLORS.un,
     'debugExceptionWidget.border': COLORS.lo,
     'debugToolBar.background': COLORS.hi,
-    'descriptionForeground': COLORS.un,
+    descriptionForeground: COLORS.un,
     'diffEditor.insertedTextBackground': COLORS.un,
     'diffEditor.removedTextBackground': COLORS.un,
     'dropdown.background': COLORS.hi,
@@ -119,12 +127,12 @@ const UI = {
     'editorWhitespace.foreground': COLORS.un,
     'editorWidget.background': COLORS.lo,
     'editorWidget.border': COLORS.un,
-    'errorForeground': COLORS.un,
+    errorForeground: COLORS.un,
     'extensionButton.prominentBackground': COLORS.un,
     'extensionButton.prominentForeground': COLORS.mi,
     'extensionButton.prominentHoverBackground': COLORS.un,
-    'focusBorder': COLORS.hi,
-    'foreground': COLORS.hi,
+    focusBorder: COLORS.hi,
+    foreground: COLORS.hi,
     'gitDecoration.addedResourceForeground': COLORS.un,
     'gitDecoration.conflictingResourceForeground': COLORS.un,
     'gitDecoration.deletedResourceForeground': COLORS.un,
@@ -248,7 +256,7 @@ const UI = {
     'tab.activeForeground': COLORS.mi,
     'tab.activeModifiedBorder': COLORS.un,
     'tab.border': COLORS.hi,
-    'tab.hoverBackground': COLORS.lo,
+    'tab.hoverBackground': COLORS.mo,
     'tab.inactiveBackground': COLORS.lo,
     'tab.inactiveForeground': COLORS.mi,
     'tab.inactiveModifiedBorder': COLORS.un,
@@ -256,7 +264,7 @@ const UI = {
     'tab.unfocusedActiveBorderTop': COLORS.un,
     'tab.unfocusedActiveForeground': COLORS.mi,
     'tab.unfocusedActiveModifiedBorder': COLORS.un,
-    'tab.unfocusedHoverBackground': COLORS.hi,
+    'tab.unfocusedHoverBackground': COLORS.mo,
     'tab.unfocusedInactiveForeground': COLORS.mi,
     'tab.unfocusedInactiveModifiedBorder': COLORS.un,
     'terminal.ansiBlack': COLORS.hi,
@@ -293,7 +301,7 @@ const UI = {
     'titleBar.inactiveForeground': COLORS.mi,
     'walkThrough.embeddedEditorBackground': COLORS.lo,
     'widget.shadow': COLORS.un,
-  }
+  },
 }
 
 // Override each theme's UI with Cameo's
@@ -302,77 +310,62 @@ const THEMES = {
     type: 'dark',
     name: 'Cameo Dark (Visual Studio)',
     include: './_ui.json',
-    tokenColors: defaultDark.tokenColors
+    tokenColors: defaultDark.tokenColors,
   },
   'default-dark-plus': {
     type: 'dark',
     name: 'Cameo Dark+ (default dark)',
     include: './_ui.json',
-    tokenColors: [...defaultDark.tokenColors, ...defaultDarkPlus.tokenColors]
+    tokenColors: [...defaultDark.tokenColors, ...defaultDarkPlus.tokenColors],
   },
   nord: {
     type: 'dark',
     name: 'Cameo Nord',
     include: './_ui.json',
-    tokenColors: nord.tokenColors
+    tokenColors: nord.tokenColors,
   },
   'one-dark': {
     type: 'dark',
     name: 'Cameo One Dark',
     include: './_ui.json',
-    tokenColors: oneDark.tokenColors
-  }
+    tokenColors: oneDark.tokenColors,
+  },
 }
 
 // Export the UI
-fs.writeFile(
-  `./themes/_ui.json`,
-  JSON.stringify(UI, null, 2),
-  'utf8',
-  (msg, err) => {
-    if (err) {
-      console.error(err)
-    }
-
-    console.log('Exported _ui.json')
+fs.writeFile(`./themes/_ui.json`, JSON.stringify(UI, null, 2), 'utf8', (msg, err) => {
+  if (err) {
+    console.error(err)
   }
-)
+
+  console.log('Exported _ui.json')
+})
 
 // Export the themes
 Object.keys(THEMES).forEach(key => {
   const theme = THEMES[key]
   const fileName = `cameo-${key}-color-theme.json`
-  fs.writeFile(
-    `./themes/${fileName}`,
-    JSON.stringify(theme, null, 2),
-    'utf8',
-    (msg, err) => {
-      if (err) {
-        console.error(err)
-      }
-
-      console.log(`Exported ${fileName}`)
+  fs.writeFile(`./themes/${fileName}`, JSON.stringify(theme, null, 2), 'utf8', (msg, err) => {
+    if (err) {
+      console.error(err)
     }
-  )
+
+    console.log(`Exported ${fileName}`)
+  })
 })
 
 // Put themes in package.json
 packageJson.contributes.themes = Object.keys(THEMES).map(key => ({
   label: THEMES[key].name,
   uiTheme: 'vs-dark',
-  path: `./themes/cameo-${key}-color-theme.json`
+  path: `./themes/cameo-${key}-color-theme.json`,
 }))
 
 // Export package.json
-fs.writeFile(
-  `./package.json`,
-  JSON.stringify(packageJson, null, 2),
-  'utf8',
-  (msg, err) => {
-    if (err) {
-      console.error(err)
-    }
-
-    console.log('Exported package.json')
+fs.writeFile(`./package.json`, JSON.stringify(packageJson, null, 2), 'utf8', (msg, err) => {
+  if (err) {
+    console.error(err)
   }
-)
+
+  console.log('Exported package.json')
+})
