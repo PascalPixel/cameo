@@ -6,7 +6,7 @@ const defaultDarkPlus = require('./submodules/default/extensions/theme-defaults/
 const nord = require('./submodules/nord/themes/nord.json')
 const oneDark = require('./submodules/one-dark/themes/OneDark-Pro.json')
 
-const COLOR = {
+const COLORS = {
   c000000000: 'hsl(000,   0%,   0%)',
   c000000010: 'hsl(000,   0%,  10%)',
   c000000020: 'hsl(000,   0%,  20%)',
@@ -18,1392 +18,1387 @@ const COLOR = {
   c000000080: 'hsl(000,   0%,  80%)',
   c000000090: 'hsl(000,   0%,  90%)',
   c000000100: 'hsl(000,   0%, 100%)',
-  c000050020: 'hsl(000,  50%,  20%)',
-  c000060050: 'hsl(000,  60%,  50%)',
-  c000070020: 'hsl(000,  70%,  20%)',
-  c000080030: 'hsl(000,  80%,  30%)',
-  c000080040: 'hsl(000,  80%,  40%)',
-  c000080060: 'hsl(000,  80%,  60%)',
-  c000090060: 'hsl(000,  90%,  60%)',
-  c000090070: 'hsl(000,  90%,  70%)',
-  c000100040: 'hsl(000, 100%,  40%)',
-  c000100050: 'hsl(000, 100%,  50%)',
-  c020050030: 'hsl(020,  50%,  30%)',
-  c020060050: 'hsl(020,  60%,  50%)',
-  c020100050: 'hsl(020, 100%,  50%)',
-  c050050070: 'hsl(050,  50%,  70%)',
-  c050060070: 'hsl(050,  60%,  70%)',
-  c050080010: 'hsl(050,  80%,  10%)',
-  c050090050: 'hsl(050,  90%,  50%)',
-  c050090060: 'hsl(050,  90%,  60%)',
-  c050100040: 'hsl(050, 100%,  40%)',
-  c050100050: 'hsl(050, 100%,  50%)',
-  c080040050: 'hsl(080,  40%,  50%)',
-  c080080030: 'hsl(080,  80%,  30%)',
-  c090000070: 'hsl(090,   0%,  70%)',
-  c090000090: 'hsl(090,   0%,  90%)',
-  c120030050: 'hsl(120,  30%,  50%)',
-  c120030060: 'hsl(120,  30%,  60%)',
-  c120040030: 'hsl(120,  40%,  30%)',
-  c120040040: 'hsl(120,  40%,  40%)',
-  c120040060: 'hsl(120,  40%,  60%)',
-  c120050040: 'hsl(120,  50%,  40%)',
-  c120080030: 'hsl(120,  80%,  30%)',
-  c120100020: 'hsl(120, 100%,  20%)',
-  c120100030: 'hsl(120, 100%,  30%)',
-  c160070050: 'hsl(160,  70%,  50%)',
-  c160090040: 'hsl(160,  90%,  40%)',
-  c170060050: 'hsl(170,  60%,  50%)',
-  c190070050: 'hsl(190,  70%,  50%)',
-  c190090020: 'hsl(190,  90%,  20%)',
-  c190090030: 'hsl(190,  90%,  30%)',
-  c190090040: 'hsl(190,  90%,  40%)',
-  c200000020: 'hsl(200,   0%,  20%)',
-  c200000040: 'hsl(200,   0%,  40%)',
-  c200060050: 'hsl(200,  60%,  50%)',
-  c200080030: 'hsl(200,  80%,  30%)',
-  c200080040: 'hsl(200,  80%,  40%)',
-  c200090020: 'hsl(200,  90%,  20%)',
-  c200100010: 'hsl(200, 100%,  10%)',
-  c200100020: 'hsl(200, 100%,  20%)',
-  c200100040: 'hsl(200, 100%,  40%)',
-  c200100050: 'hsl(200, 100%,  50%)',
-  c210010020: 'hsl(210,  10%,  20%)',
-  c210010040: 'hsl(210,  10%,  40%)',
-  c210050030: 'hsl(210,  50%,  30%)',
-  c210060060: 'hsl(210,  60%,  60%)',
-  c210060070: 'hsl(210,  60%,  70%)',
-  c210070050: 'hsl(210,  70%,  50%)',
-  c210080060: 'hsl(210,  80%,  60%)',
-  c210090040: 'hsl(210,  90%,  40%)',
-  c210100060: 'hsl(210, 100%,  60%)',
-  c210100080: 'hsl(210, 100%,  80%)',
-  c240000020: 'hsl(240,   0%,  20%)',
-  c240010020: 'hsl(240,  10%,  20%)',
-  c240010030: 'hsl(240,  10%,  30%)',
-  c240040060: 'hsl(240,  40%,  60%)',
-  c240080030: 'hsl(240,  80%,  30%)',
-  c300020070: 'hsl(300,  20%,  70%)',
-  c300050050: 'hsl(300,  50%,  50%)',
-  c300060030: 'hsl(300,  60%,  30%)',
-  c300060060: 'hsl(300,  60%,  60%)',
+  c000075020: 'hsl(000,  75%,  20%)',
+  c000075030: 'hsl(000,  75%,  30%)',
+  c000075040: 'hsl(000,  75%,  40%)',
+  c000075050: 'hsl(000,  75%,  50%)',
+  c000075060: 'hsl(000,  75%,  60%)',
+  c000075070: 'hsl(000,  75%,  70%)',
+  c020075030: 'hsl(020,  75%,  30%)',
+  c020075050: 'hsl(020,  75%,  50%)',
+  c050075010: 'hsl(050,  75%,  10%)',
+  c050075040: 'hsl(050,  75%,  40%)',
+  c050075050: 'hsl(050,  75%,  50%)',
+  c050075060: 'hsl(050,  75%,  60%)',
+  c050075070: 'hsl(050,  75%,  70%)',
+  c080075030: 'hsl(080,  75%,  30%)',
+  c080075050: 'hsl(080,  75%,  50%)',
+  c120025050: 'hsl(120,  25%,  50%)',
+  c120025060: 'hsl(120,  25%,  60%)',
+  c120075020: 'hsl(120,  75%,  20%)',
+  c120075030: 'hsl(120,  75%,  30%)',
+  c120075040: 'hsl(120,  75%,  40%)',
+  c120075060: 'hsl(120,  75%,  60%)',
+  c170075040: 'hsl(170,  75%,  40%)',
+  c170075050: 'hsl(170,  75%,  50%)',
+  c190075020: 'hsl(190,  75%,  20%)',
+  c190075030: 'hsl(190,  75%,  30%)',
+  c190075040: 'hsl(190,  75%,  40%)',
+  c190075050: 'hsl(190,  75%,  50%)',
+  c200075010: 'hsl(200,  75%,  10%)',
+  c200075020: 'hsl(200,  75%,  20%)',
+  c200075030: 'hsl(200,  75%,  30%)',
+  c200075040: 'hsl(200,  75%,  40%)',
+  c200075050: 'hsl(200,  75%,  50%)',
+  c200075060: 'hsl(200,  75%,  60%)',
+  c200075070: 'hsl(200,  75%,  70%)',
+  c200075080: 'hsl(200,  75%,  80%)',
+  c240075030: 'hsl(240,  75%,  30%)',
+  c240075060: 'hsl(240,  75%,  60%)',
+  c300025070: 'hsl(300,  25%,  70%)',
+  c300075030: 'hsl(300,  75%,  30%)',
+  c300075050: 'hsl(300,  75%,  50%)',
+  c300075060: 'hsl(300,  75%,  60%)',
 }
 
 const DEFAULTS = {
-  'activityBar.background': {
-    cameo: COLOR['c000000020'],
-    o: '#333333',
-    a: 'ff',
-  },
-  'activityBar.dropBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '1f',
-  },
-  'activityBar.foreground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'activityBar.inactiveForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '99',
-  },
-  'activityBarBadge.background': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: 'ff',
-  },
-  'activityBarBadge.foreground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'badge.background': {
-    cameo: COLOR['c000000030'],
-    o: '#4d4d4d',
-    a: 'ff',
-  },
-  'badge.foreground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'breadcrumb.activeSelectionForeground': {
-    cameo: COLOR['c000000090'],
-    o: '#e0e0e0',
-    a: 'ff',
-  },
-  'breadcrumb.background': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'breadcrumb.focusForeground': {
-    cameo: COLOR['c000000090'],
-    o: '#e0e0e0',
-    a: 'ff',
-  },
-  'breadcrumb.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'cc',
-  },
-  'breadcrumbPicker.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'button.background': {
-    cameo: COLOR['c200080030'],
-    o: '#0e639c',
-    a: 'ff',
-  },
-  'button.foreground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'button.hoverBackground': {
-    cameo: COLOR['c200080040'],
-    o: '#1177bb',
-    a: 'ff',
-  },
-  'debugExceptionWidget.background': {
-    cameo: COLOR['c000070020'],
-    o: '#420b0d',
-    a: 'ff',
-  },
-  'debugExceptionWidget.border': {
-    cameo: COLOR['c000080040'],
-    o: '#a31515',
-    a: 'ff',
-  },
-  'debugToolBar.background': {
-    cameo: COLOR['c000000020'],
-    o: '#333333',
-    a: 'ff',
-  },
-  descriptionForeground: {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'b3',
-  },
-  'diffEditor.insertedTextBackground': {
-    cameo: COLOR['c080040050'],
-    o: '#9bb955',
-    a: '33',
-  },
-  'diffEditor.removedTextBackground': {
-    cameo: COLOR['c000100050'],
-    o: '#ff0000',
-    a: '33',
-  },
-  'dropdown.background': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'dropdown.border': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'dropdown.foreground': {
-    cameo: COLOR['c000000090'],
-    o: '#f0f0f0',
-    a: 'ff',
-  },
-  'editor.background': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'editor.findMatchBackground': {
-    cameo: COLOR['c210010040'],
-    o: '#515c6a',
-    a: 'ff',
-  },
-  'editor.findMatchHighlightBackground': {
-    cameo: COLOR['c020100050'],
-    o: '#ea5c00',
-    a: '55',
-  },
-  'editor.findRangeHighlightBackground': {
-    cameo: COLOR['c210010020'],
-    o: '#3a3d41',
-    a: '66',
-  },
-  'editor.focusedStackFrameHighlightBackground': {
-    cameo: COLOR['c120030060'],
-    o: '#7abd7a',
-    a: '4d',
-  },
-  'editor.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#d4d4d4',
-    a: 'ff',
-  },
-  'editor.hoverHighlightBackground': {
-    cameo: COLOR['c210050030'],
-    o: '#264f78',
-    a: '40',
-  },
-  'editor.inactiveSelectionBackground': {
-    cameo: COLOR['c210010020'],
-    o: '#3a3d41',
-    a: 'ff',
-  },
-  'editor.lineHighlightBorder': {
-    cameo: COLOR['c000000020'],
-    o: '#282828',
-    a: 'ff',
-  },
-  'editor.rangeHighlightBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '0b',
-  },
-  'editor.selectionBackground': {
-    cameo: COLOR['c210050030'],
-    o: '#264f78',
-    a: 'ff',
-  },
-  'editor.selectionHighlightBackground': {
-    cameo: COLOR['c210100080'],
-    o: '#add6ff',
-    a: '26',
-  },
-  'editor.snippetFinalTabstopHighlightBorder': {
-    cameo: COLOR['c000000030'],
-    o: '#525252',
-    a: 'ff',
-  },
-  'editor.snippetTabstopHighlightBackground': {
-    cameo: COLOR['c000000050'],
-    o: '#7c7c7c',
-    a: '4d',
-  },
-  'editor.stackFrameHighlightBackground': {
-    cameo: COLOR['c050100050'],
-    o: '#ffff00',
-    a: '33',
-  },
-  'editor.wordHighlightBackground': {
-    cameo: COLOR['c000000030'],
-    o: '#575757',
-    a: 'b8',
-  },
-  'editor.wordHighlightStrongBackground': {
-    cameo: COLOR['c200100020'],
-    o: '#004972',
-    a: 'b8',
-  },
-  'editorActiveLineNumber.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#c6c6c6',
-    a: 'ff',
-  },
-  'editorBracketMatch.background': {
-    cameo: COLOR['c120100020'],
-    o: '#006400',
-    a: '1a',
-  },
-  'editorBracketMatch.border': {
-    cameo: COLOR['c000000050'],
-    o: '#888888',
-    a: 'ff',
-  },
-  'editorCodeLens.foreground': {
-    cameo: COLOR['c000000060'],
-    o: '#999999',
-    a: 'ff',
-  },
-  'editorCursor.foreground': {
-    cameo: COLOR['c090000070'],
-    o: '#aeafad',
-    a: 'ff',
-  },
-  'editorError.foreground': {
-    cameo: COLOR['c000080060'],
-    o: '#ea4646',
-    a: 'ff',
-  },
-  'editorGroup.border': {
-    cameo: COLOR['c000000030'],
-    o: '#444444',
-    a: 'ff',
-  },
-  'editorGroup.dropBackground': {
-    cameo: COLOR['c200000040'],
-    o: '#53595d',
-    a: '80',
-  },
-  'editorGroupHeader.noTabsBackground': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'editorGroupHeader.tabsBackground': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'editorGutter.addedBackground': {
-    cameo: COLOR['c080080030'],
-    o: '#587c0c',
-    a: 'ff',
-  },
-  'editorGutter.background': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'editorGutter.commentRangeForeground': {
-    cameo: COLOR['c000000080'],
-    o: '#c5c5c5',
-    a: 'ff',
-  },
-  'editorGutter.deletedBackground': {
-    cameo: COLOR['c000080030'],
-    o: '#94151b',
-    a: 'ff',
-  },
-  'editorGutter.modifiedBackground': {
-    cameo: COLOR['c190090030'],
-    o: '#0c7d9d',
-    a: 'ff',
-  },
-  'editorHint.foreground': {
-    cameo: COLOR['c000000090'],
-    o: '#eeeeee',
-    a: 'b3',
-  },
-  'editorHoverWidget.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'editorHoverWidget.border': {
-    cameo: COLOR['c000000030'],
-    o: '#454545',
-    a: 'ff',
-  },
-  'editorHoverWidget.statusBarBackground': {
-    cameo: COLOR['c240000020'],
-    o: '#2c2c2d',
-    a: 'ff',
-  },
-  'editorIndentGuide.activeBackground': {
-    cameo: COLOR['c000000040'],
-    o: '#707070',
-    a: 'ff',
-  },
-  'editorIndentGuide.background': {
-    cameo: COLOR['c000000030'],
-    o: '#404040',
-    a: 'ff',
-  },
-  'editorInfo.foreground': {
-    cameo: COLOR['c120100030'],
-    o: '#008000',
-    a: 'ff',
-  },
-  'editorLineNumber.activeForeground': {
-    cameo: COLOR['c000000080'],
-    o: '#c6c6c6',
-    a: 'ff',
-  },
-  'editorLineNumber.foreground': {
-    cameo: COLOR['c000000050'],
-    o: '#858585',
-    a: 'ff',
-  },
-  'editorLink.activeForeground': {
-    cameo: COLOR['c210060060'],
-    o: '#4e94ce',
-    a: 'ff',
-  },
-  'editorMarkerNavigation.background': {
-    cameo: COLOR['c240000020'],
-    o: '#2d2d30',
-    a: 'ff',
-  },
-  'editorMarkerNavigationError.background': {
-    cameo: COLOR['c000080060'],
-    o: '#ea4646',
-    a: 'ff',
-  },
-  'editorMarkerNavigationInfo.background': {
-    cameo: COLOR['c120100030'],
-    o: '#008000',
-    a: 'ff',
-  },
-  'editorMarkerNavigationWarning.background': {
-    cameo: COLOR['c120030050'],
-    o: '#4d9e4d',
-    a: 'ff',
-  },
-  'editorOverviewRuler.addedForeground': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: '99',
-  },
-  'editorOverviewRuler.border': {
-    cameo: COLOR['c000000050'],
-    o: '#7f7f7f',
-    a: '4d',
-  },
-  'editorOverviewRuler.bracketMatchForeground': {
-    cameo: COLOR['c000000060'],
-    o: '#a0a0a0',
-    a: 'ff',
-  },
-  'editorOverviewRuler.commonContentForeground': {
-    cameo: COLOR['c000000040'],
-    o: '#606060',
-    a: '66',
-  },
-  'editorOverviewRuler.currentContentForeground': {
-    cameo: COLOR['c170060050'],
-    o: '#40c8ae',
-    a: '80',
-  },
-  'editorOverviewRuler.deletedForeground': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: '99',
-  },
-  'editorOverviewRuler.errorForeground': {
-    cameo: COLOR['c000100050'],
-    o: '#ff1212',
-    a: 'b3',
-  },
-  'editorOverviewRuler.findMatchForeground': {
-    cameo: COLOR['c050090060'],
-    o: '#f6b94d',
-    a: 'b3',
-  },
-  'editorOverviewRuler.incomingContentForeground': {
-    cameo: COLOR['c210100060'],
-    o: '#40a6ff',
-    a: '80',
-  },
-  'editorOverviewRuler.infoForeground': {
-    cameo: COLOR['c240080030'],
-    o: '#121288',
-    a: 'b3',
-  },
-  'editorOverviewRuler.modifiedForeground': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: '99',
-  },
-  'editorOverviewRuler.rangeHighlightForeground': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: '99',
-  },
-  'editorOverviewRuler.selectionHighlightForeground': {
-    cameo: COLOR['c000000060'],
-    o: '#a0a0a0',
-    a: 'cc',
-  },
-  'editorOverviewRuler.warningForeground': {
-    cameo: COLOR['c120080030'],
-    o: '#128812',
-    a: 'b3',
-  },
-  'editorOverviewRuler.wordHighlightForeground': {
-    cameo: COLOR['c000000060'],
-    o: '#a0a0a0',
-    a: 'cc',
-  },
-  'editorOverviewRuler.wordHighlightStrongForeground': {
-    cameo: COLOR['c300020070'],
-    o: '#c0a0c0',
-    a: 'cc',
-  },
-  'editorPane.background': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'editorRuler.foreground': {
-    cameo: COLOR['c000000040'],
-    o: '#5a5a5a',
-    a: 'ff',
-  },
-  'editorSuggestWidget.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'editorSuggestWidget.border': {
-    cameo: COLOR['c000000030'],
-    o: '#454545',
-    a: 'ff',
-  },
-  'editorSuggestWidget.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#d4d4d4',
-    a: 'ff',
-  },
-  'editorSuggestWidget.highlightForeground': {
-    cameo: COLOR['c200100050'],
-    o: '#0097fb',
-    a: 'ff',
-  },
-  'editorSuggestWidget.selectedBackground': {
-    cameo: COLOR['c200090020'],
-    o: '#062f4a',
-    a: 'ff',
+  'listFilterWidget.outline': {
+    c: COLORS.c000000000,
+    a: '00',
+    o: '#000000',
   },
   'editorUnnecessaryCode.opacity': {
-    cameo: COLOR['c000000000'],
-    o: '#000000',
+    c: COLORS.c000000000,
     a: 'aa',
-  },
-  'editorWarning.foreground': {
-    cameo: COLOR['c120030050'],
-    o: '#4d9e4d',
-    a: 'ff',
-  },
-  'editorWhitespace.foreground': {
-    cameo: COLOR['c090000090'],
-    o: '#e3e4e2',
-    a: '29',
-  },
-  'editorWidget.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'editorWidget.border': {
-    cameo: COLOR['c000000030'],
-    o: '#454545',
-    a: 'ff',
-  },
-  errorForeground: {
-    cameo: COLOR['c000090070'],
-    o: '#f48771',
-    a: 'ff',
-  },
-  'extensionButton.prominentBackground': {
-    cameo: COLOR['c120040040'],
-    o: '#327e36',
-    a: 'ff',
-  },
-  'extensionButton.prominentForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'extensionButton.prominentHoverBackground': {
-    cameo: COLOR['c120040030'],
-    o: '#28632b',
-    a: 'ff',
-  },
-  focusBorder: {
-    cameo: COLOR['c200080030'],
-    o: '#0e639c',
-    a: 'cc',
-  },
-  foreground: {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'gitDecoration.addedResourceForeground': {
-    cameo: COLOR['c120030060'],
-    o: '#81b88b',
-    a: 'ff',
-  },
-  'gitDecoration.conflictingResourceForeground': {
-    cameo: COLOR['c240040060'],
-    o: '#6c6cc4',
-    a: 'ff',
-  },
-  'gitDecoration.deletedResourceForeground': {
-    cameo: COLOR['c000060050'],
-    o: '#c74e39',
-    a: 'ff',
-  },
-  'gitDecoration.ignoredResourceForeground': {
-    cameo: COLOR['c000000060'],
-    o: '#8c8c8c',
-    a: 'ff',
-  },
-  'gitDecoration.modifiedResourceForeground': {
-    cameo: COLOR['c050060070'],
-    o: '#e2c08d',
-    a: 'ff',
-  },
-  'gitDecoration.submoduleResourceForeground': {
-    cameo: COLOR['c210060070'],
-    o: '#8db9e2',
-    a: 'ff',
-  },
-  'gitDecoration.untrackedResourceForeground': {
-    cameo: COLOR['c120040060'],
-    o: '#73c991',
-    a: 'ff',
-  },
-  'input.background': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'input.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'input.placeholderForeground': {
-    cameo: COLOR['c000000070'],
-    o: '#a6a6a6',
-    a: 'ff',
-  },
-  'inputOption.activeBorder': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: 'ff',
-  },
-  'inputValidation.errorBackground': {
-    cameo: COLOR['c000050020'],
-    o: '#5a1d1d',
-    a: 'ff',
-  },
-  'inputValidation.errorBorder': {
-    cameo: COLOR['c000100040'],
-    o: '#be1100',
-    a: 'ff',
-  },
-  'inputValidation.infoBackground': {
-    cameo: COLOR['c190090020'],
-    o: '#063b49',
-    a: 'ff',
-  },
-  'inputValidation.infoBorder': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: 'ff',
-  },
-  'inputValidation.warningBackground': {
-    cameo: COLOR['c050080010'],
-    o: '#352a05',
-    a: 'ff',
-  },
-  'inputValidation.warningBorder': {
-    cameo: COLOR['c050100040'],
-    o: '#b89500',
-    a: 'ff',
-  },
-  'list.activeSelectionBackground': {
-    cameo: COLOR['c200090020'],
-    o: '#094771',
-    a: 'ff',
-  },
-  'list.activeSelectionForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'list.dropBackground': {
-    cameo: COLOR['c200000020'],
-    o: '#383b3d',
-    a: 'ff',
-  },
-  'list.errorForeground': {
-    cameo: COLOR['c000090070'],
-    o: '#f88070',
-    a: 'ff',
-  },
-  'list.focusBackground': {
-    cameo: COLOR['c200090020'],
-    o: '#062f4a',
-    a: 'ff',
-  },
-  'list.highlightForeground': {
-    cameo: COLOR['c200100050'],
-    o: '#0097fb',
-    a: 'ff',
-  },
-  'list.hoverBackground': {
-    cameo: COLOR['c200000020'],
-    o: '#2a2d2e',
-    a: 'ff',
-  },
-  'list.inactiveFocusBackground': {
-    cameo: COLOR['c240000020'],
-    o: '#313135',
-    a: 'ff',
-  },
-  'list.inactiveSelectionBackground': {
-    cameo: COLOR['c240010020'],
-    o: '#37373d',
-    a: 'ff',
-  },
-  'list.invalidItemForeground': {
-    cameo: COLOR['c050100040'],
-    o: '#b89500',
-    a: 'ff',
-  },
-  'list.warningForeground': {
-    cameo: COLOR['c120030050'],
-    o: '#4d9e4d',
-    a: 'ff',
-  },
-  'listFilterWidget.background': {
-    cameo: COLOR['c020050030'],
-    o: '#653723',
-    a: 'ff',
-  },
-  'listFilterWidget.noMatchesOutline': {
-    cameo: COLOR['c000100040'],
-    o: '#be1100',
-    a: 'ff',
-  },
-  'listFilterWidget.outline': {
-    cameo: COLOR['c000000000'],
     o: '#000000',
-    a: '00',
-  },
-  'menu.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'menu.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'menu.selectionBackground': {
-    cameo: COLOR['c200090020'],
-    o: '#094771',
-    a: 'ff',
-  },
-  'menu.selectionForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'menu.separatorBackground': {
-    cameo: COLOR['c000000070'],
-    o: '#bbbbbb',
-    a: 'ff',
-  },
-  'menubar.selectionBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '1a',
-  },
-  'menubar.selectionForeground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'merge.commonContentBackground': {
-    cameo: COLOR['c000000040'],
-    o: '#606060',
-    a: '29',
-  },
-  'merge.commonHeaderBackground': {
-    cameo: COLOR['c000000040'],
-    o: '#606060',
-    a: '66',
-  },
-  'merge.currentContentBackground': {
-    cameo: COLOR['c170060050'],
-    o: '#40c8ae',
-    a: '33',
-  },
-  'merge.currentHeaderBackground': {
-    cameo: COLOR['c170060050'],
-    o: '#40c8ae',
-    a: '80',
-  },
-  'merge.incomingContentBackground': {
-    cameo: COLOR['c210100060'],
-    o: '#40a6ff',
-    a: '33',
-  },
-  'merge.incomingHeaderBackground': {
-    cameo: COLOR['c210100060'],
-    o: '#40a6ff',
-    a: '80',
-  },
-  'notificationCenterHeader.background': {
-    cameo: COLOR['c240000020'],
-    o: '#303031',
-    a: 'ff',
-  },
-  'notificationLink.foreground': {
-    cameo: COLOR['c210100060'],
-    o: '#3794ff',
-    a: 'ff',
-  },
-  'notifications.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'notifications.border': {
-    cameo: COLOR['c240000020'],
-    o: '#303031',
-    a: 'ff',
-  },
-  'panel.background': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'panel.border': {
-    cameo: COLOR['c000000050'],
-    o: '#808080',
-    a: '59',
-  },
-  'panel.dropBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '1f',
-  },
-  'panelTitle.activeBorder': {
-    cameo: COLOR['c000000050'],
-    o: '#808080',
-    a: '59',
-  },
-  'panelTitle.activeForeground': {
-    cameo: COLOR['c000000090'],
-    o: '#e7e7e7',
-    a: 'ff',
-  },
-  'panelTitle.inactiveForeground': {
-    cameo: COLOR['c000000090'],
-    o: '#e7e7e7',
-    a: '99',
-  },
-  'peekView.border': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: 'ff',
-  },
-  'peekViewEditor.background': {
-    cameo: COLOR['c200100010'],
-    o: '#001f33',
-    a: 'ff',
-  },
-  'peekViewEditor.matchHighlightBackground': {
-    cameo: COLOR['c020100050'],
-    o: '#ff8f00',
-    a: '99',
-  },
-  'peekViewEditorGutter.background': {
-    cameo: COLOR['c200100010'],
-    o: '#001f33',
-    a: 'ff',
-  },
-  'peekViewResult.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'peekViewResult.fileForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'peekViewResult.lineForeground': {
-    cameo: COLOR['c000000070'],
-    o: '#bbbbbb',
-    a: 'ff',
-  },
-  'peekViewResult.matchHighlightBackground': {
-    cameo: COLOR['c020100050'],
-    o: '#ea5c00',
-    a: '4d',
-  },
-  'peekViewResult.selectionBackground': {
-    cameo: COLOR['c210100060'],
-    o: '#3399ff',
-    a: '33',
-  },
-  'peekViewResult.selectionForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'peekViewTitle.background': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'peekViewTitleDescription.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'b3',
-  },
-  'peekViewTitleLabel.foreground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'pickerGroup.border': {
-    cameo: COLOR['c240010030'],
-    o: '#3f3f46',
-    a: 'ff',
-  },
-  'pickerGroup.foreground': {
-    cameo: COLOR['c210100060'],
-    o: '#3794ff',
-    a: 'ff',
-  },
-  'progressBar.background': {
-    cameo: COLOR['c210090040'],
-    o: '#0e70c0',
-    a: 'ff',
   },
   'scrollbar.shadow': {
-    cameo: COLOR['c000000000'],
+    c: COLORS.c000000000,
+    a: 'ff',
     o: '#000000',
-    a: 'ff',
-  },
-  'scrollbarSlider.activeBackground': {
-    cameo: COLOR['c000000080'],
-    o: '#bfbfbf',
-    a: '66',
-  },
-  'scrollbarSlider.background': {
-    cameo: COLOR['c000000050'],
-    o: '#797979',
-    a: '66',
-  },
-  'scrollbarSlider.hoverBackground': {
-    cameo: COLOR['c000000040'],
-    o: '#646464',
-    a: 'b3',
-  },
-  'settings.checkboxBackground': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'settings.checkboxBorder': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'settings.checkboxForeground': {
-    cameo: COLOR['c000000090'],
-    o: '#f0f0f0',
-    a: 'ff',
-  },
-  'settings.dropdownBackground': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'settings.dropdownBorder': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'settings.dropdownForeground': {
-    cameo: COLOR['c000000090'],
-    o: '#f0f0f0',
-    a: 'ff',
-  },
-  'settings.dropdownListBorder': {
-    cameo: COLOR['c000000030'],
-    o: '#454545',
-    a: 'ff',
-  },
-  'settings.headerForeground': {
-    cameo: COLOR['c000000090'],
-    o: '#e7e7e7',
-    a: 'ff',
-  },
-  'settings.modifiedItemIndicator': {
-    cameo: COLOR['c190090030'],
-    o: '#0c7d9d',
-    a: 'ff',
-  },
-  'settings.numberInputBackground': {
-    cameo: COLOR['c000000020'],
-    o: '#292929',
-    a: 'ff',
-  },
-  'settings.numberInputForeground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'settings.textInputBackground': {
-    cameo: COLOR['c000000020'],
-    o: '#292929',
-    a: 'ff',
-  },
-  'settings.textInputForeground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'sideBar.background': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'sideBar.dropBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '1f',
-  },
-  'sideBarSectionHeader.background': {
-    cameo: COLOR['c000000050'],
-    o: '#808080',
-    a: '33',
-  },
-  'sideBarTitle.foreground': {
-    cameo: COLOR['c000000070'],
-    o: '#bbbbbb',
-    a: 'ff',
-  },
-  'statusBar.background': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: 'ff',
-  },
-  'statusBar.debuggingBackground': {
-    cameo: COLOR['c020060050'],
-    o: '#cc6633',
-    a: 'ff',
-  },
-  'statusBar.debuggingForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'statusBar.foreground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'statusBar.noFolderBackground': {
-    cameo: COLOR['c300060030'],
-    o: '#68217a',
-    a: 'ff',
-  },
-  'statusBar.noFolderForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'statusBarItem.activeBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '2e',
-  },
-  'statusBarItem.hostBackground': {
-    cameo: COLOR['c120050040'],
-    o: '#388a34',
-    a: 'ff',
-  },
-  'statusBarItem.hoverBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '1f',
-  },
-  'statusBarItem.prominentBackground': {
-    cameo: COLOR['c120050040'],
-    o: '#388a34',
-    a: 'ff',
-  },
-  'statusBarItem.prominentHoverBackground': {
-    cameo: COLOR['c120050040'],
-    o: '#369432',
-    a: 'ff',
-  },
-  'tab.activeBackground': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'tab.activeForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: 'ff',
-  },
-  'tab.activeModifiedBorder': {
-    cameo: COLOR['c200060050'],
-    o: '#3399cc',
-    a: 'ff',
-  },
-  'tab.border': {
-    cameo: COLOR['c240000020'],
-    o: '#252526',
-    a: 'ff',
-  },
-  'tab.inactiveBackground': {
-    cameo: COLOR['c000000020'],
-    o: '#2d2d2d',
-    a: 'ff',
-  },
-  'tab.inactiveForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '80',
-  },
-  'tab.inactiveModifiedBorder': {
-    cameo: COLOR['c200060050'],
-    o: '#3399cc',
-    a: '80',
-  },
-  'tab.unfocusedActiveForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '80',
-  },
-  'tab.unfocusedActiveModifiedBorder': {
-    cameo: COLOR['c200060050'],
-    o: '#3399cc',
-    a: '80',
-  },
-  'tab.unfocusedInactiveForeground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '40',
-  },
-  'tab.unfocusedInactiveModifiedBorder': {
-    cameo: COLOR['c200060050'],
-    o: '#3399cc',
-    a: '40',
   },
   'terminal.ansiBlack': {
-    cameo: COLOR['c000000000'],
+    c: COLORS.c000000000,
+    a: 'ff',
     o: '#000000',
-    a: 'ff',
-  },
-  'terminal.ansiBrightBlack': {
-    cameo: COLOR['c000000040'],
-    o: '#666666',
-    a: 'ff',
-  },
-  'terminal.ansiBlue': {
-    cameo: COLOR['c210070050'],
-    o: '#2472c8',
-    a: 'ff',
-  },
-  'terminal.ansiBrightBlue': {
-    cameo: COLOR['c210080060'],
-    o: '#3b8eea',
-    a: 'ff',
-  },
-  'terminal.ansiCyan': {
-    cameo: COLOR['c190090040'],
-    o: '#11a8cd',
-    a: 'ff',
-  },
-  'terminal.ansiBrightCyan': {
-    cameo: COLOR['c190070050'],
-    o: '#29b8db',
-    a: 'ff',
-  },
-  'terminal.ansiGreen': {
-    cameo: COLOR['c160090040'],
-    o: '#0dbc79',
-    a: 'ff',
-  },
-  'terminal.ansiBrightGreen': {
-    cameo: COLOR['c160070050'],
-    o: '#23d18b',
-    a: 'ff',
-  },
-  'terminal.ansiMagenta': {
-    cameo: COLOR['c300050050'],
-    o: '#bc3fbc',
-    a: 'ff',
-  },
-  'terminal.ansiBrightMagenta': {
-    cameo: COLOR['c300060060'],
-    o: '#d670d6',
-    a: 'ff',
-  },
-  'terminal.ansiRed': {
-    cameo: COLOR['c000060050'],
-    o: '#cd3131',
-    a: 'ff',
-  },
-  'terminal.ansiBrightRed': {
-    cameo: COLOR['c000090060'],
-    o: '#f14c4c',
-    a: 'ff',
-  },
-  'terminal.ansiWhite': {
-    cameo: COLOR['c000000090'],
-    o: '#e5e5e5',
-    a: 'ff',
-  },
-  'terminal.ansiBrightWhite': {
-    cameo: COLOR['c000000100'],
-    o: '#e5e5e5',
-    a: 'ff',
-  },
-  'terminal.ansiYellow': {
-    cameo: COLOR['c050090050'],
-    o: '#e5e510',
-    a: 'ff',
-  },
-  'terminal.ansiBrightYellow': {
-    cameo: COLOR['c050090060'],
-    o: '#f5f543',
-    a: 'ff',
-  },
-  'terminal.background': {
-    cameo: COLOR['c000000010'],
-    o: '#1e1e1e',
-    a: 'ff',
-  },
-  'terminal.border': {
-    cameo: COLOR['c000000050'],
-    o: '#808080',
-    a: '59',
-  },
-  'terminal.foreground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'terminal.selectionBackground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '40',
-  },
-  'textBlockQuote.background': {
-    cameo: COLOR['c000000050'],
-    o: '#7f7f7f',
-    a: '1a',
-  },
-  'textBlockQuote.border': {
-    cameo: COLOR['c200100040'],
-    o: '#007acc',
-    a: '80',
-  },
-  'textCodeBlock.background': {
-    cameo: COLOR['c000000010'],
-    o: '#0a0a0a',
-    a: '66',
-  },
-  'textLink.activeForeground': {
-    cameo: COLOR['c210100060'],
-    o: '#3794ff',
-    a: 'ff',
-  },
-  'textLink.foreground': {
-    cameo: COLOR['c210100060'],
-    o: '#3794ff',
-    a: 'ff',
-  },
-  'textPreformat.foreground': {
-    cameo: COLOR['c050050070'],
-    o: '#d7ba7d',
-    a: 'ff',
-  },
-  'textSeparator.foreground': {
-    cameo: COLOR['c000000100'],
-    o: '#ffffff',
-    a: '2e',
-  },
-  'titleBar.activeBackground': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: 'ff',
-  },
-  'titleBar.activeForeground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: 'ff',
-  },
-  'titleBar.inactiveBackground': {
-    cameo: COLOR['c000000020'],
-    o: '#3c3c3c',
-    a: '99',
-  },
-  'titleBar.inactiveForeground': {
-    cameo: COLOR['c000000080'],
-    o: '#cccccc',
-    a: '99',
   },
   'widget.shadow': {
-    cameo: COLOR['c000000000'],
-    o: '#000000',
+    c: COLORS.c000000000,
     a: 'ff',
+    o: '#000000',
+  },
+  'textCodeBlock.background': {
+    c: COLORS.c000000010,
+    a: '66',
+    o: '#0a0a0a',
+  },
+  'breadcrumb.background': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'editor.background': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'editorGroupHeader.noTabsBackground': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'editorGutter.background': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'editorPane.background': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'panel.background': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'peekViewTitle.background': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'tab.activeBackground': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'terminal.background': {
+    c: COLORS.c000000010,
+    a: 'ff',
+    o: '#1e1e1e',
+  },
+  'breadcrumbPicker.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'editorGroupHeader.tabsBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'editorHoverWidget.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'editorSuggestWidget.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'editorWidget.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'menu.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'notifications.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'peekViewResult.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'sideBar.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'tab.border': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#252526',
+  },
+  'editor.lineHighlightBorder': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#282828',
+  },
+  'settings.numberInputBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#292929',
+  },
+  'settings.textInputBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#292929',
+  },
+  'list.hoverBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#2a2d2e',
+  },
+  'editorHoverWidget.statusBarBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#2c2c2d',
+  },
+  'tab.inactiveBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#2d2d2d',
+  },
+  'editorMarkerNavigation.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#2d2d30',
+  },
+  'notificationCenterHeader.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#303031',
+  },
+  'notifications.border': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#303031',
+  },
+  'list.inactiveFocusBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#313135',
+  },
+  'activityBar.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#333333',
+  },
+  'debugToolBar.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#333333',
+  },
+  'list.inactiveSelectionBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#37373d',
+  },
+  'list.dropBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#383b3d',
+  },
+  'editor.findRangeHighlightBackground': {
+    c: COLORS.c000000020,
+    a: '66',
+    o: '#3a3d41',
+  },
+  'editor.inactiveSelectionBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3a3d41',
+  },
+  'titleBar.inactiveBackground': {
+    c: COLORS.c000000020,
+    a: '99',
+    o: '#3c3c3c',
+  },
+  'dropdown.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'dropdown.border': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'input.background': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'settings.checkboxBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'settings.checkboxBorder': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'settings.dropdownBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'settings.dropdownBorder': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'titleBar.activeBackground': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3c3c3c',
+  },
+  'pickerGroup.border': {
+    c: COLORS.c000000020,
+    a: 'ff',
+    o: '#3f3f46',
+  },
+  'editorIndentGuide.background': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#404040',
+  },
+  'editorGroup.border': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#444444',
+  },
+  'editorHoverWidget.border': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#454545',
+  },
+  'editorSuggestWidget.border': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#454545',
+  },
+  'editorWidget.border': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#454545',
+  },
+  'settings.dropdownListBorder': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#454545',
+  },
+  'badge.background': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#4d4d4d',
+  },
+  'editor.snippetFinalTabstopHighlightBorder': {
+    c: COLORS.c000000030,
+    a: 'ff',
+    o: '#525252',
+  },
+  'editor.wordHighlightBackground': {
+    c: COLORS.c000000030,
+    a: 'b8',
+    o: '#575757',
+  },
+  'editor.findMatchBackground': {
+    c: COLORS.c000000040,
+    a: 'ff',
+    o: '#515c6a',
+  },
+  'editorGroup.dropBackground': {
+    c: COLORS.c000000040,
+    a: '80',
+    o: '#53595d',
+  },
+  'editorRuler.foreground': {
+    c: COLORS.c000000040,
+    a: 'ff',
+    o: '#5a5a5a',
+  },
+  'merge.commonContentBackground': {
+    c: COLORS.c000000040,
+    a: '29',
+    o: '#606060',
+  },
+  'editorOverviewRuler.commonContentForeground': {
+    c: COLORS.c000000040,
+    a: '66',
+    o: '#606060',
+  },
+  'merge.commonHeaderBackground': {
+    c: COLORS.c000000040,
+    a: '66',
+    o: '#606060',
+  },
+  'scrollbarSlider.hoverBackground': {
+    c: COLORS.c000000040,
+    a: 'b3',
+    o: '#646464',
+  },
+  'terminal.ansiBrightBlack': {
+    c: COLORS.c000000040,
+    a: 'ff',
+    o: '#666666',
+  },
+  'editorIndentGuide.activeBackground': {
+    c: COLORS.c000000040,
+    a: 'ff',
+    o: '#707070',
+  },
+  'scrollbarSlider.background': {
+    c: COLORS.c000000050,
+    a: '66',
+    o: '#797979',
+  },
+  'editor.snippetTabstopHighlightBackground': {
+    c: COLORS.c000000050,
+    a: '4d',
+    o: '#7c7c7c',
+  },
+  'textBlockQuote.background': {
+    c: COLORS.c000000050,
+    a: '1a',
+    o: '#7f7f7f',
+  },
+  'editorOverviewRuler.border': {
+    c: COLORS.c000000050,
+    a: '4d',
+    o: '#7f7f7f',
+  },
+  'sideBarSectionHeader.background': {
+    c: COLORS.c000000050,
+    a: '33',
+    o: '#808080',
+  },
+  'panel.border': {
+    c: COLORS.c000000050,
+    a: '59',
+    o: '#808080',
+  },
+  'panelTitle.activeBorder': {
+    c: COLORS.c000000050,
+    a: '59',
+    o: '#808080',
+  },
+  'terminal.border': {
+    c: COLORS.c000000050,
+    a: '59',
+    o: '#808080',
+  },
+  'editorLineNumber.foreground': {
+    c: COLORS.c000000050,
+    a: 'ff',
+    o: '#858585',
+  },
+  'editorBracketMatch.border': {
+    c: COLORS.c000000050,
+    a: 'ff',
+    o: '#888888',
+  },
+  'gitDecoration.ignoredResourceForeground': {
+    c: COLORS.c000000060,
+    a: 'ff',
+    o: '#8c8c8c',
+  },
+  'editorCodeLens.foreground': {
+    c: COLORS.c000000060,
+    a: 'ff',
+    o: '#999999',
+  },
+  'editorOverviewRuler.selectionHighlightForeground': {
+    c: COLORS.c000000060,
+    a: 'cc',
+    o: '#a0a0a0',
+  },
+  'editorOverviewRuler.wordHighlightForeground': {
+    c: COLORS.c000000060,
+    a: 'cc',
+    o: '#a0a0a0',
+  },
+  'editorOverviewRuler.bracketMatchForeground': {
+    c: COLORS.c000000060,
+    a: 'ff',
+    o: '#a0a0a0',
+  },
+  'input.placeholderForeground': {
+    c: COLORS.c000000070,
+    a: 'ff',
+    o: '#a6a6a6',
+  },
+  'editorCursor.foreground': {
+    c: COLORS.c000000070,
+    a: 'ff',
+    o: '#aeafad',
+  },
+  'menu.separatorBackground': {
+    c: COLORS.c000000070,
+    a: 'ff',
+    o: '#bbbbbb',
+  },
+  'peekViewResult.lineForeground': {
+    c: COLORS.c000000070,
+    a: 'ff',
+    o: '#bbbbbb',
+  },
+  'sideBarTitle.foreground': {
+    c: COLORS.c000000070,
+    a: 'ff',
+    o: '#bbbbbb',
+  },
+  'scrollbarSlider.activeBackground': {
+    c: COLORS.c000000080,
+    a: '66',
+    o: '#bfbfbf',
+  },
+  'editorGutter.commentRangeForeground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#c5c5c5',
+  },
+  'editorActiveLineNumber.foreground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#c6c6c6',
+  },
+  'editorLineNumber.activeForeground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#c6c6c6',
+  },
+  'titleBar.inactiveForeground': {
+    c: COLORS.c000000080,
+    a: '99',
+    o: '#cccccc',
+  },
+  descriptionForeground: {
+    c: COLORS.c000000080,
+    a: 'b3',
+    o: '#cccccc',
+  },
+  'peekViewTitleDescription.foreground': {
+    c: COLORS.c000000080,
+    a: 'b3',
+    o: '#cccccc',
+  },
+  'breadcrumb.foreground': {
+    c: COLORS.c000000080,
+    a: 'cc',
+    o: '#cccccc',
+  },
+  foreground: {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'input.foreground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'menu.foreground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'menubar.selectionForeground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'settings.numberInputForeground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'settings.textInputForeground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'terminal.foreground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'titleBar.activeForeground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#cccccc',
+  },
+  'editor.foreground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#d4d4d4',
+  },
+  'editorSuggestWidget.foreground': {
+    c: COLORS.c000000080,
+    a: 'ff',
+    o: '#d4d4d4',
+  },
+  'breadcrumb.activeSelectionForeground': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#e0e0e0',
+  },
+  'breadcrumb.focusForeground': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#e0e0e0',
+  },
+  'editorWhitespace.foreground': {
+    c: COLORS.c000000090,
+    a: '29',
+    o: '#e3e4e2',
+  },
+  'terminal.ansiBrightWhite': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#e5e5e5',
+  },
+  'terminal.ansiWhite': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#e5e5e5',
+  },
+  'panelTitle.inactiveForeground': {
+    c: COLORS.c000000090,
+    a: '99',
+    o: '#e7e7e7',
+  },
+  'panelTitle.activeForeground': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#e7e7e7',
+  },
+  'settings.headerForeground': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#e7e7e7',
+  },
+  'editorHint.foreground': {
+    c: COLORS.c000000090,
+    a: 'b3',
+    o: '#eeeeee',
+  },
+  'dropdown.foreground': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#f0f0f0',
+  },
+  'settings.checkboxForeground': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#f0f0f0',
+  },
+  'settings.dropdownForeground': {
+    c: COLORS.c000000090,
+    a: 'ff',
+    o: '#f0f0f0',
+  },
+  'editor.rangeHighlightBackground': {
+    c: COLORS.c000000100,
+    a: '0b',
+    o: '#ffffff',
+  },
+  'menubar.selectionBackground': {
+    c: COLORS.c000000100,
+    a: '1a',
+    o: '#ffffff',
+  },
+  'activityBar.dropBackground': {
+    c: COLORS.c000000100,
+    a: '1f',
+    o: '#ffffff',
+  },
+  'panel.dropBackground': {
+    c: COLORS.c000000100,
+    a: '1f',
+    o: '#ffffff',
+  },
+  'sideBar.dropBackground': {
+    c: COLORS.c000000100,
+    a: '1f',
+    o: '#ffffff',
+  },
+  'statusBarItem.hoverBackground': {
+    c: COLORS.c000000100,
+    a: '1f',
+    o: '#ffffff',
+  },
+  'statusBarItem.activeBackground': {
+    c: COLORS.c000000100,
+    a: '2e',
+    o: '#ffffff',
+  },
+  'textSeparator.foreground': {
+    c: COLORS.c000000100,
+    a: '2e',
+    o: '#ffffff',
+  },
+  'tab.unfocusedInactiveForeground': {
+    c: COLORS.c000000100,
+    a: '40',
+    o: '#ffffff',
+  },
+  'terminal.selectionBackground': {
+    c: COLORS.c000000100,
+    a: '40',
+    o: '#ffffff',
+  },
+  'tab.inactiveForeground': {
+    c: COLORS.c000000100,
+    a: '80',
+    o: '#ffffff',
+  },
+  'tab.unfocusedActiveForeground': {
+    c: COLORS.c000000100,
+    a: '80',
+    o: '#ffffff',
+  },
+  'activityBar.inactiveForeground': {
+    c: COLORS.c000000100,
+    a: '99',
+    o: '#ffffff',
+  },
+  'activityBar.foreground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'activityBarBadge.foreground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'badge.foreground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'button.foreground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'extensionButton.prominentForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'list.activeSelectionForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'menu.selectionForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'peekViewResult.fileForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'peekViewResult.selectionForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'peekViewTitleLabel.foreground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'statusBar.debuggingForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'statusBar.foreground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'statusBar.noFolderForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'tab.activeForeground': {
+    c: COLORS.c000000100,
+    a: 'ff',
+    o: '#ffffff',
+  },
+  'debugExceptionWidget.background': {
+    c: COLORS.c000075020,
+    a: 'ff',
+    o: '#420b0d',
+  },
+  'inputValidation.errorBackground': {
+    c: COLORS.c000075020,
+    a: 'ff',
+    o: '#5a1d1d',
+  },
+  'editorGutter.deletedBackground': {
+    c: COLORS.c000075030,
+    a: 'ff',
+    o: '#94151b',
+  },
+  'debugExceptionWidget.border': {
+    c: COLORS.c000075040,
+    a: 'ff',
+    o: '#a31515',
+  },
+  'inputValidation.errorBorder': {
+    c: COLORS.c000075040,
+    a: 'ff',
+    o: '#be1100',
+  },
+  'listFilterWidget.noMatchesOutline': {
+    c: COLORS.c000075040,
+    a: 'ff',
+    o: '#be1100',
+  },
+  'gitDecoration.deletedResourceForeground': {
+    c: COLORS.c000075050,
+    a: 'ff',
+    o: '#c74e39',
+  },
+  'terminal.ansiRed': {
+    c: COLORS.c000075050,
+    a: 'ff',
+    o: '#cd3131',
+  },
+  'diffEditor.removedTextBackground': {
+    c: COLORS.c000075050,
+    a: '33',
+    o: '#ff0000',
+  },
+  'editorOverviewRuler.errorForeground': {
+    c: COLORS.c000075050,
+    a: 'b3',
+    o: '#ff1212',
+  },
+  'editorError.foreground': {
+    c: COLORS.c000075060,
+    a: 'ff',
+    o: '#ea4646',
+  },
+  'editorMarkerNavigationError.background': {
+    c: COLORS.c000075060,
+    a: 'ff',
+    o: '#ea4646',
+  },
+  'terminal.ansiBrightRed': {
+    c: COLORS.c000075060,
+    a: 'ff',
+    o: '#f14c4c',
+  },
+  errorForeground: {
+    c: COLORS.c000075070,
+    a: 'ff',
+    o: '#f48771',
+  },
+  'list.errorForeground': {
+    c: COLORS.c000075070,
+    a: 'ff',
+    o: '#f88070',
+  },
+  'listFilterWidget.background': {
+    c: COLORS.c020075030,
+    a: 'ff',
+    o: '#653723',
+  },
+  'statusBar.debuggingBackground': {
+    c: COLORS.c020075050,
+    a: 'ff',
+    o: '#cc6633',
+  },
+  'peekViewResult.matchHighlightBackground': {
+    c: COLORS.c020075050,
+    a: '4d',
+    o: '#ea5c00',
+  },
+  'editor.findMatchHighlightBackground': {
+    c: COLORS.c020075050,
+    a: '55',
+    o: '#ea5c00',
+  },
+  'peekViewEditor.matchHighlightBackground': {
+    c: COLORS.c020075050,
+    a: '99',
+    o: '#ff8f00',
+  },
+  'inputValidation.warningBackground': {
+    c: COLORS.c050075010,
+    a: 'ff',
+    o: '#352a05',
+  },
+  'inputValidation.warningBorder': {
+    c: COLORS.c050075040,
+    a: 'ff',
+    o: '#b89500',
+  },
+  'list.invalidItemForeground': {
+    c: COLORS.c050075040,
+    a: 'ff',
+    o: '#b89500',
+  },
+  'terminal.ansiYellow': {
+    c: COLORS.c050075050,
+    a: 'ff',
+    o: '#e5e510',
+  },
+  'editor.stackFrameHighlightBackground': {
+    c: COLORS.c050075050,
+    a: '33',
+    o: '#ffff00',
+  },
+  'terminal.ansiBrightYellow': {
+    c: COLORS.c050075060,
+    a: 'ff',
+    o: '#f5f543',
+  },
+  'editorOverviewRuler.findMatchForeground': {
+    c: COLORS.c050075060,
+    a: 'b3',
+    o: '#f6b94d',
+  },
+  'textPreformat.foreground': {
+    c: COLORS.c050075070,
+    a: 'ff',
+    o: '#d7ba7d',
+  },
+  'gitDecoration.modifiedResourceForeground': {
+    c: COLORS.c050075070,
+    a: 'ff',
+    o: '#e2c08d',
+  },
+  'editorGutter.addedBackground': {
+    c: COLORS.c080075030,
+    a: 'ff',
+    o: '#587c0c',
+  },
+  'diffEditor.insertedTextBackground': {
+    c: COLORS.c080075050,
+    a: '33',
+    o: '#9bb955',
+  },
+  'editorMarkerNavigationWarning.background': {
+    c: COLORS.c120025050,
+    a: 'ff',
+    o: '#4d9e4d',
+  },
+  'editorWarning.foreground': {
+    c: COLORS.c120025050,
+    a: 'ff',
+    o: '#4d9e4d',
+  },
+  'list.warningForeground': {
+    c: COLORS.c120025050,
+    a: 'ff',
+    o: '#4d9e4d',
+  },
+  'editor.focusedStackFrameHighlightBackground': {
+    c: COLORS.c120025060,
+    a: '4d',
+    o: '#7abd7a',
+  },
+  'gitDecoration.addedResourceForeground': {
+    c: COLORS.c120025060,
+    a: 'ff',
+    o: '#81b88b',
+  },
+  'editorBracketMatch.background': {
+    c: COLORS.c120075020,
+    a: '1a',
+    o: '#006400',
+  },
+  'editorInfo.foreground': {
+    c: COLORS.c120075030,
+    a: 'ff',
+    o: '#008000',
+  },
+  'editorMarkerNavigationInfo.background': {
+    c: COLORS.c120075030,
+    a: 'ff',
+    o: '#008000',
+  },
+  'editorOverviewRuler.warningForeground': {
+    c: COLORS.c120075030,
+    a: 'b3',
+    o: '#128812',
+  },
+  'extensionButton.prominentHoverBackground': {
+    c: COLORS.c120075030,
+    a: 'ff',
+    o: '#28632b',
+  },
+  'extensionButton.prominentBackground': {
+    c: COLORS.c120075040,
+    a: 'ff',
+    o: '#327e36',
+  },
+  'statusBarItem.prominentHoverBackground': {
+    c: COLORS.c120075040,
+    a: 'ff',
+    o: '#369432',
+  },
+  'statusBarItem.hostBackground': {
+    c: COLORS.c120075040,
+    a: 'ff',
+    o: '#388a34',
+  },
+  'statusBarItem.prominentBackground': {
+    c: COLORS.c120075040,
+    a: 'ff',
+    o: '#388a34',
+  },
+  'gitDecoration.untrackedResourceForeground': {
+    c: COLORS.c120075060,
+    a: 'ff',
+    o: '#73c991',
+  },
+  'terminal.ansiGreen': {
+    c: COLORS.c170075040,
+    a: 'ff',
+    o: '#0dbc79',
+  },
+  'terminal.ansiBrightGreen': {
+    c: COLORS.c170075050,
+    a: 'ff',
+    o: '#23d18b',
+  },
+  'merge.currentContentBackground': {
+    c: COLORS.c170075050,
+    a: '33',
+    o: '#40c8ae',
+  },
+  'editorOverviewRuler.currentContentForeground': {
+    c: COLORS.c170075050,
+    a: '80',
+    o: '#40c8ae',
+  },
+  'merge.currentHeaderBackground': {
+    c: COLORS.c170075050,
+    a: '80',
+    o: '#40c8ae',
+  },
+  'inputValidation.infoBackground': {
+    c: COLORS.c190075020,
+    a: 'ff',
+    o: '#063b49',
+  },
+  'editorGutter.modifiedBackground': {
+    c: COLORS.c190075030,
+    a: 'ff',
+    o: '#0c7d9d',
+  },
+  'settings.modifiedItemIndicator': {
+    c: COLORS.c190075030,
+    a: 'ff',
+    o: '#0c7d9d',
+  },
+  'terminal.ansiCyan': {
+    c: COLORS.c190075040,
+    a: 'ff',
+    o: '#11a8cd',
+  },
+  'terminal.ansiBrightCyan': {
+    c: COLORS.c190075050,
+    a: 'ff',
+    o: '#29b8db',
+  },
+  'peekViewEditor.background': {
+    c: COLORS.c200075010,
+    a: 'ff',
+    o: '#001f33',
+  },
+  'peekViewEditorGutter.background': {
+    c: COLORS.c200075010,
+    a: 'ff',
+    o: '#001f33',
+  },
+  'editor.wordHighlightStrongBackground': {
+    c: COLORS.c200075020,
+    a: 'b8',
+    o: '#004972',
+  },
+  'editorSuggestWidget.selectedBackground': {
+    c: COLORS.c200075020,
+    a: 'ff',
+    o: '#062f4a',
+  },
+  'list.focusBackground': {
+    c: COLORS.c200075020,
+    a: 'ff',
+    o: '#062f4a',
+  },
+  'list.activeSelectionBackground': {
+    c: COLORS.c200075020,
+    a: 'ff',
+    o: '#094771',
+  },
+  'menu.selectionBackground': {
+    c: COLORS.c200075020,
+    a: 'ff',
+    o: '#094771',
+  },
+  focusBorder: {
+    c: COLORS.c200075030,
+    a: 'cc',
+    o: '#0e639c',
+  },
+  'button.background': {
+    c: COLORS.c200075030,
+    a: 'ff',
+    o: '#0e639c',
+  },
+  'editor.hoverHighlightBackground': {
+    c: COLORS.c200075030,
+    a: '40',
+    o: '#264f78',
+  },
+  'editor.selectionBackground': {
+    c: COLORS.c200075030,
+    a: 'ff',
+    o: '#264f78',
+  },
+  'textBlockQuote.border': {
+    c: COLORS.c200075040,
+    a: '80',
+    o: '#007acc',
+  },
+  'editorOverviewRuler.addedForeground': {
+    c: COLORS.c200075040,
+    a: '99',
+    o: '#007acc',
+  },
+  'editorOverviewRuler.deletedForeground': {
+    c: COLORS.c200075040,
+    a: '99',
+    o: '#007acc',
+  },
+  'editorOverviewRuler.modifiedForeground': {
+    c: COLORS.c200075040,
+    a: '99',
+    o: '#007acc',
+  },
+  'editorOverviewRuler.rangeHighlightForeground': {
+    c: COLORS.c200075040,
+    a: '99',
+    o: '#007acc',
+  },
+  'activityBarBadge.background': {
+    c: COLORS.c200075040,
+    a: 'ff',
+    o: '#007acc',
+  },
+  'inputOption.activeBorder': {
+    c: COLORS.c200075040,
+    a: 'ff',
+    o: '#007acc',
+  },
+  'inputValidation.infoBorder': {
+    c: COLORS.c200075040,
+    a: 'ff',
+    o: '#007acc',
+  },
+  'peekView.border': {
+    c: COLORS.c200075040,
+    a: 'ff',
+    o: '#007acc',
+  },
+  'statusBar.background': {
+    c: COLORS.c200075040,
+    a: 'ff',
+    o: '#007acc',
+  },
+  'progressBar.background': {
+    c: COLORS.c200075040,
+    a: 'ff',
+    o: '#0e70c0',
+  },
+  'button.hoverBackground': {
+    c: COLORS.c200075040,
+    a: 'ff',
+    o: '#1177bb',
+  },
+  'editorSuggestWidget.highlightForeground': {
+    c: COLORS.c200075050,
+    a: 'ff',
+    o: '#0097fb',
+  },
+  'list.highlightForeground': {
+    c: COLORS.c200075050,
+    a: 'ff',
+    o: '#0097fb',
+  },
+  'terminal.ansiBlue': {
+    c: COLORS.c200075050,
+    a: 'ff',
+    o: '#2472c8',
+  },
+  'tab.unfocusedInactiveModifiedBorder': {
+    c: COLORS.c200075050,
+    a: '40',
+    o: '#3399cc',
+  },
+  'tab.inactiveModifiedBorder': {
+    c: COLORS.c200075050,
+    a: '80',
+    o: '#3399cc',
+  },
+  'tab.unfocusedActiveModifiedBorder': {
+    c: COLORS.c200075050,
+    a: '80',
+    o: '#3399cc',
+  },
+  'tab.activeModifiedBorder': {
+    c: COLORS.c200075050,
+    a: 'ff',
+    o: '#3399cc',
+  },
+  'peekViewResult.selectionBackground': {
+    c: COLORS.c200075060,
+    a: '33',
+    o: '#3399ff',
+  },
+  'notificationLink.foreground': {
+    c: COLORS.c200075060,
+    a: 'ff',
+    o: '#3794ff',
+  },
+  'pickerGroup.foreground': {
+    c: COLORS.c200075060,
+    a: 'ff',
+    o: '#3794ff',
+  },
+  'textLink.activeForeground': {
+    c: COLORS.c200075060,
+    a: 'ff',
+    o: '#3794ff',
+  },
+  'textLink.foreground': {
+    c: COLORS.c200075060,
+    a: 'ff',
+    o: '#3794ff',
+  },
+  'terminal.ansiBrightBlue': {
+    c: COLORS.c200075060,
+    a: 'ff',
+    o: '#3b8eea',
+  },
+  'merge.incomingContentBackground': {
+    c: COLORS.c200075060,
+    a: '33',
+    o: '#40a6ff',
+  },
+  'editorOverviewRuler.incomingContentForeground': {
+    c: COLORS.c200075060,
+    a: '80',
+    o: '#40a6ff',
+  },
+  'merge.incomingHeaderBackground': {
+    c: COLORS.c200075060,
+    a: '80',
+    o: '#40a6ff',
+  },
+  'editorLink.activeForeground': {
+    c: COLORS.c200075060,
+    a: 'ff',
+    o: '#4e94ce',
+  },
+  'gitDecoration.submoduleResourceForeground': {
+    c: COLORS.c200075070,
+    a: 'ff',
+    o: '#8db9e2',
+  },
+  'editor.selectionHighlightBackground': {
+    c: COLORS.c200075080,
+    a: '26',
+    o: '#add6ff',
+  },
+  'editorOverviewRuler.infoForeground': {
+    c: COLORS.c240075030,
+    a: 'b3',
+    o: '#121288',
+  },
+  'gitDecoration.conflictingResourceForeground': {
+    c: COLORS.c240075060,
+    a: 'ff',
+    o: '#6c6cc4',
+  },
+  'editorOverviewRuler.wordHighlightStrongForeground': {
+    c: COLORS.c300025070,
+    a: 'cc',
+    o: '#c0a0c0',
+  },
+  'statusBar.noFolderBackground': {
+    c: COLORS.c300075030,
+    a: 'ff',
+    o: '#68217a',
+  },
+  'terminal.ansiMagenta': {
+    c: COLORS.c300075050,
+    a: 'ff',
+    o: '#bc3fbc',
+  },
+  'terminal.ansiBrightMagenta': {
+    c: COLORS.c300075060,
+    a: 'ff',
+    o: '#d670d6',
   },
 }
 
-// // Override each theme's UI with Cameo's
-// const THEMES = {
-//   'default-dark': {
-//     type: 'dark',
-//     name: 'Cameo Dark (Visual Studio)',
-//     include: './_ui.json',
-//     tokenColors: defaultDark.tokenColors,
-//   },
-//   'default-dark-plus': {
-//     type: 'dark',
-//     name: 'Cameo Dark+ (default dark)',
-//     include: './_ui.json',
-//     tokenColors: [...defaultDark.tokenColors, ...defaultDarkPlus.tokenColors],
-//   },
-//   nord: {
-//     type: 'dark',
-//     name: 'Cameo Nord',
-//     include: './_ui.json',
-//     tokenColors: nord.tokenColors,
-//   },
-//   'one-dark': {
-//     type: 'dark',
-//     name: 'Cameo One Dark',
-//     include: './_ui.json',
-//     tokenColors: oneDark.tokenColors,
-//   },
-// }
+let UI = { colors: {} }
 
-// // Export the UI
-// fs.writeFile(`./themes/_ui.json`, JSON.stringify(UI, null, 2), 'utf8', (msg, err) => {
-//   if (err) {
-//     console.error(err)
-//   }
+Object.keys(DEFAULTS).forEach(key => {
+  UI.colors[key] = `${Color(DEFAULTS[key].c).hex()}${
+    DEFAULTS[key].a === 'ff' ? '' : DEFAULTS[key].a
+  }`.toUpperCase()
+})
 
-//   console.log('Exported _ui.json')
-// })
+// Override each theme's UI with Cameo's
+const THEMES = {
+  'default-dark': {
+    type: 'dark',
+    name: 'Cameo Dark (Visual Studio)',
+    include: './_ui.json',
+    tokenColors: defaultDark.tokenColors,
+  },
+  'default-dark-plus': {
+    type: 'dark',
+    name: 'Cameo Dark+ (default dark)',
+    include: './_ui.json',
+    tokenColors: [...defaultDark.tokenColors, ...defaultDarkPlus.tokenColors],
+  },
+  nord: {
+    type: 'dark',
+    name: 'Cameo Nord',
+    include: './_ui.json',
+    tokenColors: nord.tokenColors,
+  },
+  'one-dark': {
+    type: 'dark',
+    name: 'Cameo One Dark',
+    include: './_ui.json',
+    tokenColors: oneDark.tokenColors,
+  },
+}
 
-// // Export the themes
-// Object.keys(THEMES).forEach(key => {
-//   const theme = THEMES[key]
-//   const fileName = `cameo-${key}-color-theme.json`
-//   fs.writeFile(`./themes/${fileName}`, JSON.stringify(theme, null, 2), 'utf8', (msg, err) => {
-//     if (err) {
-//       console.error(err)
-//     }
+// Export the UI
+fs.writeFile(
+  `./themes/_ui.json`,
+  JSON.stringify(UI, null, 2),
+  'utf8',
+  (msg, err) => {
+    if (err) {
+      console.error(err)
+    }
 
-//     console.log(`Exported ${fileName}`)
-//   })
-// })
+    console.log('Exported _ui.json')
+  }
+)
 
-// // Put themes in package.json
-// packageJson.contributes.themes = Object.keys(THEMES).map(key => ({
-//   label: THEMES[key].name,
-//   uiTheme: 'vs-dark',
-//   path: `./themes/cameo-${key}-color-theme.json`,
-// }))
+// Export the themes
+Object.keys(THEMES).forEach(key => {
+  const theme = THEMES[key]
+  const fileName = `cameo-${key}-color-theme.json`
+  fs.writeFile(
+    `./themes/${fileName}`,
+    JSON.stringify(theme, null, 2),
+    'utf8',
+    (msg, err) => {
+      if (err) {
+        console.error(err)
+      }
 
-// // Export package.json
-// fs.writeFile(`./package.json`, JSON.stringify(packageJson, null, 2), 'utf8', (msg, err) => {
-//   if (err) {
-//     console.error(err)
-//   }
+      console.log(`Exported ${fileName}`)
+    }
+  )
+})
 
-//   console.log('Exported package.json')
-// })
+// Put themes in package.json
+packageJson.contributes.themes = Object.keys(THEMES).map(key => ({
+  label: THEMES[key].name,
+  uiTheme: 'vs-dark',
+  path: `./themes/cameo-${key}-color-theme.json`,
+}))
+
+// Export package.json
+fs.writeFile(
+  `./package.json`,
+  JSON.stringify(packageJson, null, 2),
+  'utf8',
+  (msg, err) => {
+    if (err) {
+      console.error(err)
+    }
+
+    console.log('Exported package.json')
+  }
+)
