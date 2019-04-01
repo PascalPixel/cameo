@@ -1,6 +1,7 @@
 const fs = require('fs')
 const Color = require('color')
 const packageJson = require('./package.json')
+const settings = require('/Users/pascalpixel/Library/Application Support/Code/User/settings.json')
 const defaultDark = require('./submodules/default/extensions/theme-defaults/themes/dark_vs.json')
 const defaultDarkPlus = require('./submodules/default/extensions/theme-defaults/themes/dark_plus.json')
 const nord = require('./submodules/nord/themes/nord.json')
@@ -1314,13 +1315,15 @@ const DEFAULTS = {
   },
 }
 
-let UI = { colors: {} }
+let UI = {}
 
-Object.keys(DEFAULTS).forEach(key => {
-  UI.colors[key] = `${Color(DEFAULTS[key].c).hex()}${
-    DEFAULTS[key].a === 'ff' ? '' : DEFAULTS[key].a
-  }`.toUpperCase()
-})
+Object.keys(DEFAULTS)
+  .sort()
+  .forEach(key => {
+    UI[key] = `${Color(DEFAULTS[key].c).hex()}${
+      DEFAULTS[key].a === 'ff' ? '' : DEFAULTS[key].a
+    }`.toLowerCase()
+  })
 
 // Override each theme's UI with Cameo's
 const THEMES = {
@@ -1350,10 +1353,24 @@ const THEMES = {
   },
 }
 
+// Export the UI to Settings
+fs.writeFile(
+  `/Users/pascalpixel/Library/Application Support/Code/User/settings.json`,
+  JSON.stringify({ ...settings, 'workbench.colorCustomizations': UI }, null, 2),
+  'utf8',
+  (msg, err) => {
+    if (err) {
+      console.error(err)
+    }
+
+    console.log('Exported to settings.json')
+  }
+)
+
 // Export the UI
 fs.writeFile(
   `./themes/_ui.json`,
-  JSON.stringify(UI, null, 2),
+  JSON.stringify({ colors: UI }, null, 2),
   'utf8',
   (msg, err) => {
     if (err) {
