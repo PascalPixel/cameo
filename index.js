@@ -4,6 +4,7 @@ const defaultDark = require('./submodules/default/extensions/theme-defaults/them
 const defaultDarkPlus = require('./submodules/default/extensions/theme-defaults/themes/dark_plus.json')
 const nord = require('./submodules/nord/themes/nord.json')
 const oneDark = require('./submodules/one-dark/themes/OneDark-Pro.json')
+const cityLights = require('./submodules/city-lights/themes/City Lights-color-theme.json')
 
 const COLORS = {
   hi: '#1a1a1a',
@@ -12,7 +13,7 @@ const COLORS = {
   mo: '#262626',
   et: '#363636',
   tr: '#726c6b',
-  oo: '#00000000'
+  oo: '#00000000',
 }
 
 const UI = {
@@ -118,8 +119,8 @@ const UI = {
     'tab.unfocusedInactiveForeground': COLORS.mi,
     'terminal.foreground': COLORS.mi,
     'titleBar.activeForeground': COLORS.mi,
-    'titleBar.inactiveForeground': COLORS.mi
-  }
+    'titleBar.inactiveForeground': COLORS.mi,
+  },
 }
 
 // Override each theme's UI with Cameo's
@@ -127,27 +128,27 @@ const THEMES = {
   'default-dark': {
     type: 'dark',
     name: 'Cameo Dark (Visual Studio)',
-    include: "./_ui.json",
-    tokenColors: defaultDark.tokenColors
+    include: './_ui.json',
+    tokenColors: defaultDark.tokenColors,
   },
   'default-dark-plus': {
     type: 'dark',
     name: 'Cameo Dark+ (default dark)',
-    include: "./_ui.json",
-    tokenColors: [...defaultDark.tokenColors, ...defaultDarkPlus.tokenColors]
+    include: './_ui.json',
+    tokenColors: [...defaultDark.tokenColors, ...defaultDarkPlus.tokenColors],
   },
   nord: {
     type: 'dark',
     name: 'Cameo Nord',
-    include: "./_ui.json",
-    tokenColors: nord.tokenColors
+    include: './_ui.json',
+    tokenColors: nord.tokenColors,
   },
   'one-dark': {
     type: 'dark',
     name: 'Cameo One Dark',
-    include: "./_ui.json",
-    tokenColors: oneDark.tokenColors
-  }
+    include: './_ui.json',
+    tokenColors: oneDark.tokenColors,
+  },
 }
 
 // Export the UI
@@ -186,7 +187,7 @@ Object.keys(THEMES).forEach(key => {
 packageJson.contributes.themes = Object.keys(THEMES).map(key => ({
   label: THEMES[key].name,
   uiTheme: 'vs-dark',
-  path: `./themes/cameo-${key}-color-theme.json`
+  path: `./themes/cameo-${key}-color-theme.json`,
 }))
 
 // Export package.json

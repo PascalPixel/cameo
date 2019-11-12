@@ -55,5 +55,13 @@
         "path": "./themes/cameo-one-dark-color-theme.json"
       }
     ]
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   }
 }

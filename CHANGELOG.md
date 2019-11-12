@@ -8,7 +8,7 @@ All notable changes to the Cameo Theme will be documented in this file.
 
 ## [1.1.0]
 
-- Added Dracula & Dark (Visual Studio)
+- Added Dark (Visual Studio)
 
 ## [1.0.0]
 
