@@ -2,7 +2,7 @@
 
 All notable changes to the Cameo Theme will be documented in this file.
 
-## [1.2.0]
+## [1.4.0]
 
 - Added City Lights & Night Owl
 

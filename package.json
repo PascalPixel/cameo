@@ -2,7 +2,7 @@
   "name": "cameo",
   "displayName": "Cameo",
   "description": "macOS Mojave Dark UI Themes",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "publisher": "pascalpixel",
   "engines": {
     "vscode": "^1.30.0"
