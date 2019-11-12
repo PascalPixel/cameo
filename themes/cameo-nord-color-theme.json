@@ -25,7 +25,7 @@
       "name": "Comment",
       "scope": "comment",
       "settings": {
-        "foreground": "#4C566A"
+        "foreground": "#616E88"
       }
     },
     {
@@ -207,7 +207,7 @@
         "punctuation.start.definition.comment"
       ],
       "settings": {
-        "foreground": "#4C566A"
+        "foreground": "#616E88"
       }
     },
     {
@@ -546,7 +546,7 @@
         "source.java punctuation.definition.tag.end.javadoc"
       ],
       "settings": {
-        "foreground": "#4C566A"
+        "foreground": "#616E88"
       }
     },
     {
@@ -618,9 +618,20 @@
     },
     {
       "name": "[JavaScript] String Template Literals Punctuation",
-      "scope": "source.js string.template punctuation.definition.template-expression",
+      "scope": [
+        "source.js string.quoted.template punctuation.quasi.element.begin",
+        "source.js string.quoted.template punctuation.quasi.element.end",
+        "source.js string.template punctuation.definition.template-expression"
+      ],
       "settings": {
-        "foreground": "#5E81AC"
+        "foreground": "#81A1C1"
+      }
+    },
+    {
+      "name": "[JavaScript] Interpolated String Template Punctuation Functions",
+      "scope": "source.js string.quoted.template meta.method-call.with-arguments",
+      "settings": {
+        "foreground": "#ECEFF4"
       }
     },
     {
@@ -642,9 +653,9 @@
     },
     {
       "name": "[JavaScript] Variable Other Object",
-      "scope": "source.js meta.var.expr variable.other.object",
+      "scope": "source.js variable.other.object",
       "settings": {
-        "foreground": "#8FBCBB"
+        "foreground": "#D8DEE9"
       }
     },
     {
@@ -756,7 +767,7 @@
       "name": "[Markdown] Markup Quote Punctuation Definition",
       "scope": "text.html.markdown markup.quote",
       "settings": {
-        "foreground": "#4C566A"
+        "foreground": "#616E88"
       }
     },
     {
@@ -788,6 +799,13 @@
       }
     },
     {
+      "name": "[Perl] Perl Sigils",
+      "scope": "source.perl punctuation.definition.variable",
+      "settings": {
+        "foreground": "#D8DEE9"
+      }
+    },
+    {
       "name": "[PHP] Meta Function-Call Object",
       "scope": [
         "source.php meta.function-call",
@@ -809,10 +827,7 @@
     },
     {
       "name": "[Python] Function Call",
-      "scope": [
-        "source.python meta.function-call",
-        "source.python meta.function-call.generic"
-      ],
+      "scope": "source.python meta.function-call.generic",
       "settings": {
         "foreground": "#88C0D0"
       }

@@ -2,7 +2,7 @@ const fs = require('fs')
 const packageJson = require('./package.json')
 const defaultDark = require('./submodules/default/extensions/theme-defaults/themes/dark_vs.json')
 const defaultDarkPlus = require('./submodules/default/extensions/theme-defaults/themes/dark_plus.json')
-const nord = require('./submodules/nord/themes/nord.json')
+const nord = require('./submodules/nord/themes/nord-color-theme.json')
 const oneDark = require('./submodules/one-dark/themes/OneDark-Pro.json')
 const cityLights = require('./submodules/city-lights/themes/City Lights-color-theme.json')
 
@@ -148,6 +148,12 @@ const THEMES = {
     name: 'Cameo One Dark',
     include: './_ui.json',
     tokenColors: oneDark.tokenColors,
+  },
+  'city-lights': {
+    type: 'dark',
+    name: 'Cameo City Lights',
+    include: './_ui.json',
+    tokenColors: cityLights.tokenColors,
   },
 }
 

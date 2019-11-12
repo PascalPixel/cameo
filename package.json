@@ -2,7 +2,7 @@
   "name": "cameo",
   "displayName": "Cameo",
   "description": "macOS Mojave Dark UI Themes",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "publisher": "pascalpixel",
   "engines": {
     "vscode": "^1.30.0"
@@ -53,6 +53,11 @@
         "label": "Cameo One Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/cameo-one-dark-color-theme.json"
+      },
+      {
+        "label": "Cameo City Lights",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cameo-city-lights-color-theme.json"
       }
     ]
   },
