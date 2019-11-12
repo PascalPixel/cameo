@@ -7,6 +7,3 @@
 [submodule "submodules/nord"]
 	path = submodules/nord
 	url = https://github.com/arcticicestudio/nord-visual-studio-code
-[submodule "submodules/dracula"]
-	path = submodules/dracula
-	url = https://github.com/dracula/visual-studio-code
