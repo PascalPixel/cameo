@@ -19,7 +19,7 @@
     "theme": "dark"
   },
   "scripts": {
-    "compile": "node makeThemes.js",
+    "compile": "node index.js",
     "publish": "vsce publish"
   },
   "license": "SEE LICENSE IN LICENSE.txt",

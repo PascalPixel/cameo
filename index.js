@@ -35,7 +35,7 @@ const UI = {
     'editorGroupHeader.tabsBackground': COLORS.lo,
     'editorSuggestWidget.background': COLORS.lo,
     'debugExceptionWidget.border': COLORS.lo,
-    'list.activeSelectionForeground': COLORS.lo,
+    'list.activeSelectionForeground': COLORS.mo,
     'panel.background': COLORS.lo,
     'peekViewEditor.background': COLORS.lo,
     'peekViewEditorGutter.background': COLORS.lo,
@@ -172,7 +172,7 @@ fs.writeFile(
 )
 
 // Export the themes
-Object.keys(THEMES).forEach(key => {
+Object.keys(THEMES).forEach((key) => {
   const theme = THEMES[key]
   const fileName = `cameo-${key}-color-theme.json`
   fs.writeFile(
@@ -190,7 +190,7 @@ Object.keys(THEMES).forEach(key => {
 })
 
 // Put themes in package.json
-packageJson.contributes.themes = Object.keys(THEMES).map(key => ({
+packageJson.contributes.themes = Object.keys(THEMES).map((key) => ({
   label: THEMES[key].name,
   uiTheme: 'vs-dark',
   path: `./themes/cameo-${key}-color-theme.json`,
