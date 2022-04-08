@@ -46,7 +46,7 @@
     "input.foreground": "#cecece",
     "input.placeholderForeground": "#cecece",
     "list.activeSelectionBackground": "#363636",
-    "list.activeSelectionForeground": "#212121",
+    "list.activeSelectionForeground": "#cecece",
     "list.focusForeground": "#cecece",
     "list.hoverBackground": "#1a1a1a",
     "list.inactiveSelectionBackground": "#363636",
